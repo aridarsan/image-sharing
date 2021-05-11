@@ -1,6 +1,7 @@
 import './App.css';
 import { Switch, Route } from "react-router-dom";
 import Home from "./components/Home"
+import ImageDetail from './components/ImageDetail';
 
 
 function App() {
@@ -8,7 +9,10 @@ function App() {
     <div className="App">
       <div>
       <Switch>
-        <Route path="/">
+      <Route path="/detail/">
+          <ImageDetail />
+        </Route>
+        <Route exact path="/">
           <Home />
         </Route>
       </Switch>

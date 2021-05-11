@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import {
   Container,
+  NavLink,
   Navbar,
   Nav,
   ButtonDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarBrand
+  NavbarBrand,
 } from 'reactstrap';
 
 const NavBar = () => {
@@ -18,20 +18,19 @@ const NavBar = () => {
   return (
     <Navbar
       expand='md'
-      style={{ backgroundColor: 'lightblue', height: '70px', boxShadow: '-1px 37px 85px -47px rgba(33,33,33,1)' }}
+      color='light'
+      light
+      style={{
+        height: '70px',
+        boxShadow: '-1px 37px 85px -47px rgba(33,33,33,1)',
+      }}
     >
-      <Container>
-        <Nav style={{ alignItems: 'center', alignContent:"center" }}>
-          <div>
-            <NavLink to='/'>
-              <NavbarBrand>
-                <h5 style={{ alignItems: 'center' }} className="mt-3">
-                  <strong>Bank Account Manager</strong>
-                </h5>
-              </NavbarBrand>
-            </NavLink>
-          </div>
-        </Nav>
+      <Container fluid>
+        <NavbarBrand href='/'>
+          <strong>
+            <span>Image Sharing</span>
+          </strong>
+        </NavbarBrand>
 
         <Nav>
           <div>
@@ -50,7 +49,7 @@ const NavBar = () => {
                 className='ml-auto'
               >
                 <img
-                  src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/d7/d77a676e25c4e2e491c15ed49b6f097e957dd89b_full.jpg"
+                  src='https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/d7/d77a676e25c4e2e491c15ed49b6f097e957dd89b_full.jpg'
                   alt='pp'
                   className='avatar'
                   style={{
@@ -66,7 +65,7 @@ const NavBar = () => {
                     to='/'
                     activeClassName='active'
                     className='nav-link'
-                    style={{height:"2rem"}}
+                    style={{ height: '2rem' }}
                   >
                     <p>
                       <i className='fas fa-user-alt mr-2'></i>Profile
@@ -79,7 +78,7 @@ const NavBar = () => {
                     to='/'
                     activeClassName='active'
                     className='nav-link'
-                    style={{height:"2rem"}}
+                    style={{ height: '2rem' }}
                   >
                     <p>
                       <i className='fas fa-sign-out-alt mr-2'></i>Logout

@@ -1,11 +1,13 @@
-import Jumbotron from "./Jumbotron"
+import ImageList from "./ImageList"
 import NavBar from "./NavBar"
+import Footer from "./Footer"
 
 function Home() {
   return (
     <div>
       <NavBar/>
-      <Jumbotron/>
+      <ImageList/>
+      <Footer/>
     </div>
   );
 }
